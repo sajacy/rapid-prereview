@@ -4,6 +4,7 @@
   "description": "rapid PREreview (outbreak science)",
   "main": "index.js",
   "scripts": {
+    "docker": "docker-compose -f .devcontainer/docker-compose.yml up --build || true",
     "profile": "cross-env NODE_ENV=production webpack --mode production --profile --json > stats.json && webpack-bundle-analyzer stats.json public/assets",
     "cloudant:init": "source env.private.sh && babel-node ./scripts/ddocs.js",
     "cloudant:ddocs": "source env.private.sh && babel-node ./scripts/ddocs.js",

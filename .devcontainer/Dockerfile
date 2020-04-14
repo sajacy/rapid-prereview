@@ -37,3 +37,6 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
 
 # Uncomment to default to non-root user
 # USER $USER_UID
+
+WORKDIR /workspace
+ENTRYPOINT ["npm", "start"]
